@@ -1,25 +1,21 @@
-import React, { Component } from 'react'
+import React  from 'react'
+import Spinner from '../spinner.jsx'
 import UserProfile from './Userprofile'
 
-class Users extends Component {
-    constructor(){
-        super();
-        this.state = {
-            users : []
+const Users= ({users, loading}) => (
+    <div>{
+        loading ? <Spinner/> :
+
+                <div style={userStyle}>
+                    {
+                    users.map(user =>(
+                            <UserProfile  key={user.id} user={user}/>
+                        ))
+                    }
+                </div> 
         }
-    }
-    render() {
-        return (
-            <div style={userStyle}>
-                {
-                    this.state.users.map(user =>(
-                        <UserProfile  key={user.id} user={user}/>
-                    ))
-                }
-            </div>
-        )
-    }
-}
+    </div>
+)
 const userStyle = {
     display : 'grid',
     gridTemplateColums : 'repeat(3, 1fr)',

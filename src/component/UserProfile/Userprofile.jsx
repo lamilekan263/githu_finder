@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types';
 
 
-const Userprofile = ({user: { login, avatar_url, html_url } }) => {
+const Userprofile = ({user: {login, avatar_url, html_url }}) => {
 
         return (
             <div className="card text-center">
@@ -14,6 +14,6 @@ const Userprofile = ({user: { login, avatar_url, html_url } }) => {
     }
 
 Userprofile.prototype ={
-    user: PropTypes.object.isRequired,
+    user: PropTypes.object.isRequired
 }
 export default Userprofile
