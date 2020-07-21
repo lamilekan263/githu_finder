@@ -21,9 +21,4 @@ const userStyle = {
     gridTemplateColums : 'repeat(3, 1fr)',
     gridGap :'1rem'
 }
-
-Users.proptype ={
-    Users : PropTypes.array.isRequired,
-    loading : PropTypes.bool.isRequired
-}
 export default Users

@@ -1,7 +1,7 @@
 import React  from 'react'
 import Spinner from '../spinner.jsx'
 import UserProfile from './Userprofile'
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-'
 const Users= ({users, loading}) => (
     <div>{
         loading ? <Spinner/> :
@@ -20,10 +20,5 @@ const userStyle = {
     display : 'grid',
     gridTemplateColums : 'repeat(3, 1fr)',
     gridGap :'1rem'
-}
-
-Users.proptype ={
-    Users : PropTypes.array.isRequired,
-    loading : PropTypes.bool.isRequired
 }
 export default Users

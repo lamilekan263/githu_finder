@@ -22,8 +22,5 @@ const userStyle = {
     gridGap :'1rem'
 }
 
-Users.proptype ={
-    Users : PropTypes.array.isRequired,
-    loading : PropTypes.bool.isRequired
-}
+Users
 export default Users
