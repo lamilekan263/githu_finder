@@ -20,7 +20,7 @@ class App extends Component {
     this.setState({users : res.data, loading : false},)
   }
   searchUsers = text =>{
-    console.log(text)
+    consoel.log(text)
   }
   render(){
   return (
