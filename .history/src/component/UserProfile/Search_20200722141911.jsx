@@ -22,18 +22,17 @@ import PropTypes from 'prop-types'
         this.setState({text : ''})
      }
     render() {
-        const {showClear, clearUsers} = this.props;
         return (
             <div>
                 <form className="form" onSubmit= {this.onSubmit}>
                     <input type="text" name="text" placeholder="Search Users..." onChange={this.onChange} value={this.state.text}/>
                     <input type="submit" value="Search" className="btn btn-dark btn-block"/>
                 </form>
-                {showClear &&(
-                    <button className="btn btn-light btn-block" onClick={clearUsers}>
+                {this.props.showClear &&(
+                    <button className="btn btn-light btn-block" onClick={this.props.clearUsers}>
                         Clear
                     </button>
-                )}
+                }
             </div>
         )
     }

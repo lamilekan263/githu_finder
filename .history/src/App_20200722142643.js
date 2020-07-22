@@ -33,7 +33,7 @@ class App extends Component {
   }
   render(){
     const {loading, users} = this.state;
-    const {searchUsers, clearUsers} = this
+    const {searchUsers, clearUsers} = this,
   return (
     <div className="App">
       <Navbar/>

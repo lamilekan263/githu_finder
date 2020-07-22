@@ -5,8 +5,6 @@ import PropTypes from 'prop-types'
 
          static propTypes={
             searchUsers : PropTypes.func.isRequired,
-            clearUsers : PropTypes.func.isRequired,
-            showClear : PropTypes.bool.isRequired,
          };
          state ={
              text : ""
@@ -22,18 +20,13 @@ import PropTypes from 'prop-types'
         this.setState({text : ''})
      }
     render() {
-        const {showClear, clearUsers} = this.props;
         return (
             <div>
                 <form className="form" onSubmit= {this.onSubmit}>
                     <input type="text" name="text" placeholder="Search Users..." onChange={this.onChange} value={this.state.text}/>
                     <input type="submit" value="Search" className="btn btn-dark btn-block"/>
                 </form>
-                {showClear &&(
-                    <button className="btn btn-light btn-block" onClick={clearUsers}>
-                        Clear
-                    </button>
-                )}
+                <button className="btn btn- btn-block"></button>
             </div>
         )
     }
