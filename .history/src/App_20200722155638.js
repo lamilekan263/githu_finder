@@ -5,7 +5,6 @@ import Navbar from './component/layout/Navbar/Navbar.Component';
 import Users from './component/UserProfile/Users'
 import Search from './component/UserProfile/Search'
 import Alert from './component/layout/Alert'
-import About from './component/pages/About'
 import './App.css';
 
 class App extends Component {
