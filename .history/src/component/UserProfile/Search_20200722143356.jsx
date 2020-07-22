@@ -7,7 +7,6 @@ import PropTypes from 'prop-types'
             searchUsers : PropTypes.func.isRequired,
             clearUsers : PropTypes.func.isRequired,
             showClear : PropTypes.bool.isRequired,
-            setAlert : PropTypes.func.isRequired,
          };
          state ={
              text : ""

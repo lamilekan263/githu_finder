@@ -37,7 +37,7 @@ class App extends Component {
 
   setAlert = (msg, type) =>{
     this.setState({alert : { msg, type }})
-    setTimeout(()=> this.setState({alert : null}),3000)
+    setTimeout(()=> this.setState({alert : null}),4000)
   }
   render(){
     const {loading, users} = this.state;

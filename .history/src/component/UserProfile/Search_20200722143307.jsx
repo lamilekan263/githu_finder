@@ -7,7 +7,6 @@ import PropTypes from 'prop-types'
             searchUsers : PropTypes.func.isRequired,
             clearUsers : PropTypes.func.isRequired,
             showClear : PropTypes.bool.isRequired,
-            setAlert : PropTypes.func.isRequired,
          };
          state ={
              text : ""
@@ -20,12 +19,10 @@ import PropTypes from 'prop-types'
      onSubmit = (e) =>{
         e.preventDefault();
         if(this.state.text === ''){
-            this.props.setAlert('Please  enter something', 'light')
-        }else{
-            this.props.searchUsers(this.state.text)
-            this.setState({text : ''})
+            this.props.setAlert
         }
-        
+        this.props.searchUsers(this.state.text)
+        this.setState({text : ''})
      }
     render() {
         const {showClear, clearUsers} = this.props;

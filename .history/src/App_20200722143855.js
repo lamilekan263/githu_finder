@@ -3,7 +3,6 @@ import axios from 'axios'
 import Navbar from './component/layout/Navbar/Navbar.Component';
 import Users from './component/UserProfile/Users'
 import Search from './component/UserProfile/Search'
-import Alert from './component/layout/Alert'
 import './App.css';
 
 class App extends Component {
@@ -35,9 +34,8 @@ class App extends Component {
   }
   // set Alert
 
-  setAlert = (msg, type) =>{
-    this.setState({alert : { msg, type }})
-    setTimeout(()=> this.setState({alert : null}),3000)
+  setAlert = () =>{
+    this.setState({alert : { msg : msg, type: type }})
   }
   render(){
     const {loading, users} = this.state;
@@ -46,7 +44,6 @@ class App extends Component {
     <div className="App">
       <Navbar/>
       <div className="container">
-        <Alert alert ={this.state.alert}/>
         <Search searchUsers = {searchUsers} clearUsers= {clearUsers}
          showClear ={users.length > 0 ? true : false} 
          setAlert ={this.setAlert}
