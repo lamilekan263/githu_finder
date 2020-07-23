@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import  Spinner from '../spinner';
-import Repos from '../Repos/Repos'
+import {Repos} from ''
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 class User extends Component {
@@ -11,7 +11,6 @@ class User extends Component {
     }
     static propTypes = {
         loading : PropTypes.bool,
-        repos : PropTypes.array.isRequired,
         user: PropTypes.object.isRequired,
         getUser : PropTypes.func.isRequired,
         getUserRepos : PropTypes.func.isRequired,
@@ -32,7 +31,7 @@ class User extends Component {
             company,
             hireable
         } = this.props.user
-        const {loading, repos} = this.props
+        const {loading} = this.props
 
         if(loading) return <Spinner />
         return (
@@ -105,7 +104,6 @@ class User extends Component {
                         Public Gists : {public_gists}
                     </div>
                 </div>
-                <Repos repos ={repos} />
             </Fragment>
         )
     }
