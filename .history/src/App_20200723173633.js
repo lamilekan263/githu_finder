@@ -3,7 +3,7 @@ import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
 import axios from 'axios'
 import Navbar from './component/layout/Navbar/Navbar.Component';
 import Users from './component/UserProfile/Users'
-import User from './component/UserProfile/User'
+import Users from './component/UserProfile/Users'
 import Search from './component/UserProfile/Search'
 import Alert from './component/layout/Alert'
 import About from './component/pages/About'
@@ -51,7 +51,7 @@ class App extends Component {
     setTimeout(()=> this.setState({alert : null}),3000)
   }
   render(){
-    const {loading, users, user} = this.state;
+    const {loading, users} = this.state;
     const {searchUsers, clearUsers} = this
   return (
     <Router>
@@ -70,11 +70,6 @@ class App extends Component {
               </Fragment>
             )}/>
             <Route exact path= "/about" component = {About}  />
-            <Route exact path ='/user/:login' render = {
-              props =>(
-                <User {...props} getUser ={this.getUser} user = {user} loading ={loading} />
-              )
-            } />
           </Switch>
           
         </div>
