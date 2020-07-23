@@ -12,7 +12,7 @@ class User extends Component {
         loading : PropTypes.bool,
         user: PropTypes.object.isRequired,
         getUser : PropTypes.func.isRequired,
-        getUserRepos : PropTypes.func.isRequired,
+        getUserRepos 
     }
     render() {
         const {

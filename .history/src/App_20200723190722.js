@@ -58,7 +58,7 @@ class App extends Component {
     setTimeout(()=> this.setState({alert : null}),3000)
   }
   render(){
-    const {loading, users, user, repos} = this.state;
+    const {loading, users, user} = this.state;
     const {searchUsers, clearUsers} = this
   return (
     <Router>
@@ -79,7 +79,7 @@ class App extends Component {
             <Route exact path= "/about" component = {About}  />
             <Route exact path ='/user/:login' render = {
               props =>(
-                <User {...props} getUser ={this.getUser} getUserRepos={this.getUserRepos} repos={repos} user = {user} loading ={loading} />
+                <User {...props} getUser ={this.getUser} user = {user} loading ={loading} />
               )
             } />
           </Switch>

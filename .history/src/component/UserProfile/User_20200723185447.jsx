@@ -4,15 +4,12 @@ import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 class User extends Component {
     componentDidMount(){
-        this.props.getUser(this.props.match.params.login);
-        this.props.getUserRepos(this.props.match.params.login)
-
+        this.props.getUser(this.props.match.params.login)
     }
     static propTypes = {
         loading : PropTypes.bool,
         user: PropTypes.object.isRequired,
         getUser : PropTypes.func.isRequired,
-        getUserRepos : PropTypes.func.isRequired,
     }
     render() {
         const {
@@ -96,7 +93,7 @@ class User extends Component {
                     <div className="badge badge-success">
                         Following : {following}
                     </div>
-                    <div className="badge badge-light">
+                    <div className="badge badge-l">
                         Public Repos : {public_repos}
                     </div>
                     <div className="badge badge-dark">

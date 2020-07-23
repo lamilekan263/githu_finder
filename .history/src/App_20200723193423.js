@@ -79,7 +79,7 @@ class App extends Component {
             <Route exact path= "/about" component = {About}  />
             <Route exact path ='/user/:login' render = {
               props =>(
-                <User {...props} getUser ={this.getUser} getUserRepos={this.getUserRepos} repos={repos} user = {user} loading ={loading} />
+                <User {...props} getUser ={this.getUser} getUserRepos={this.getUserRepos} repos={this.repos} user = {user} loading ={loading} />
               )
             } />
           </Switch>
