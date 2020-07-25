@@ -1,0 +1,34 @@
+import React from 'react'
+import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types';
+
+
+const Userprofile = ({user: {login, avatar_url, html_url }}) => {
+
+        return (
+            <div className="card text-center">
+                <img src={avatar_url} alt="" className="round-img" style={{width:'60px'}}/>
+                <h3>{login}</h3>
+                <Link to={`/user/${login}`} className="btn btn-dark btn-sm my-1">more</Link>
+            </div>
+            <div class="max-w-sm rounded overflow-hidden shadow-lg">
+            <img class="w-full" src="/img/card-top.jpg" alt="Sunset in the mountains">
+            <div class="px-6 py-4">
+              <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+              <p class="text-gray-700 text-base">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+              </p>
+            </div>
+            <div class="px-6 py-4">
+              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#photography</span>
+              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#travel</span>
+              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#winter</span>
+            </div>
+          </div>
+        )
+    }
+
+Userprofile.prototype ={
+    user: PropTypes.object.isRequired
+}
+export default Userprofile
